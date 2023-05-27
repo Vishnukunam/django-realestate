@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body>
+{% extends 'shelter/base.html' %}
+{% load static %}
+<title>{% block title %} Shelter | Property Details {% endblock %}</title>
+
+{% block  content %}
+    <!-- BREADCRUMBS AREA START -->
+    <div class="breadcrumbs-area bread-bg-1 bg-opacity-black-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="breadcrumbs">
+                        <h2 class="breadcrumbs-title">Properties Details</h2>
+                        <ul class="breadcrumbs-list">
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                            <li><a href="{% url 'properties_list' %}">Properties</a></li>
+                            <li>Properties Details</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMBS AREA END -->
+
+    <!-- Start page content -->
+    <section id="page-content" class="page-wrapper col-12">
+      
+        <!-- PROPERTIES DETAILS AREA START -->
+        <div class="container-fluid">
+        <div class="d-flex flex-row">
+        <div class="properties-details-area pt-115 pb-60 col-12">
+                <h1>{{ home.title }}</h1><br>
+                <div class="row">
+                    <div class="col-md-8">
+                        <!-- pro-details-image -->
+                        <div class="pro-details-image mb-60">
+                            <div class="pro-details-big-image">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="pro-1">
+                                        <a href="#" data-lightbox="image-1" data-title="real estate Properties - 1">
+                                            <img src="{{ home.image.url }}" alt="" style="height:350px;width:600px">
+                                        </a>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="pro-2">
+                                        <a href="" data-lightbox="image-1" data-title="real estate Properties - 2">
+                                            <img src="{{ home.image2.url }}" alt="" style="height:350px;width:600px">
+                                        </a>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="pro-3">
+                                        <a href="" data-lightbox="image-1" data-title="real estate Properties - 3">
+                                            <img src="{{ home.image3.url }}" alt="" style="height:350px;width:600px">
+                                        </a>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="pro-4">
+                                        <a href="images/single-property/big/1.jpg" data-lightbox="image-1" data-title="real estate Properties - 4">
+                                            <img src="{% static 'images/single-property/big/1.jpg' %}" alt="" style="height:350px;width:600px">
+                                        </a>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="pro-5">
+                                        <a href="images/single-property/big/2.jpg" data-lightbox="image-1" data-title="real estate Properties - 5">
+                                            <img src="{% static 'images/single-property/big/2.jpg' %}" alt="" style="height:350px;width:600px">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pro-details-carousel">
+                                <div class="pro-details-item">
+                                    <a href="#pro-1" data-toggle="tab"><img src="{{ home.image.url }}" alt="" style="height:350px;width:600px"></a>
+                                </div>
+                                <div class="pro-details-item">
+                                    <a href="#pro-2" data-toggle="tab">
+                                        <img src="{{ home.image2.url }}" alt="" style="height:350px;width:600px">                
+                                    </a>
+                                </div>
+                                <div class="pro-details-item">
+                                    <a href="#pro-3" data-toggle="tab">
+                                        <img src="{{ home.image3.url }}" alt="" style="height:350px;width:600px">                
+                                    </a>
+                                </div>
+                            </div>                           
+                        </div>
+                        <!-- pro-details-short-info -->
+                    <div>
+                        <div class="pro-details-short-info mb-60">
+                            <div class="row">
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="pro-details-condition mt-40">
+                                        <h5>Condition</h5>
+                                        <div class="pro-details-condition-inner bg-gray">
+                                            <ul class="condition-list">
+                                                <li><img src="{% static 'shelter/images/icons/5.png' %}" alt="">Area {{ home.area}}</li>
+                                                <li><img src="{% static 'shelter/images/icons/6.png' %}" alt="">Bedroom {{home.bedrooms}}</li>
+                                                <li><img src="{% static 'shelter/images/icons/7.png' %}" alt="">Bathroom {{ home.bathrooms}}</li>
+                                                <li><img src="{% static 'shelter/images/icons/13.png' %}" alt="">Garage {{ home.garage }}</li>
+                                                <li><img src="{% static 'shelter/images/icons/14.png' %}" alt="">Kitchen {{ home.kitchen}}</li>
+                                                <li>Rs:{{ home.price }}</li>
+                                            </ul>
+                                            <p><img src="{% static 'shelter/images/icons/location.png' %}" alt="">{{ home.location }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- pro-details-description -->
+                                <div class="pro-details-description mb-50">
+                                    <p>{{ home.description}}</p>              
+                                </div>
+                                <!-- <div class="col-sm-6 col-xs-12">
+                                    <div class="pro-details-amenities">
+                                        <h5>Amenities</h5>
+                                        <div class="pro-details-amenities-inner bg-gray">
+                                            <ul class="amenities-list">
+                                                <li>Air Conditioning</li>
+                                                <li>Bedding</li>
+                                                <li>Balcony</li>
+                                                <li>Cable TV</li>
+                                                <li>Internet</li>
+                                                <li>Parking</li>
+                                                <li>Lift</li>
+                                                <li>Pool</li>
+                                                <li>Dishwasher</li>
+                                                <li>Toaster</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div style="margin-left:300px;">
+                            <p>
+                            <iframe src="{{ home.map }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </p>
+                        </div>
+                    </div>
+                        <!-- agent-review -->
+                        <div class="pro-details-agent-review">
+                            <div class="row">
+                                <!-- single-agent -->
+                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                    <div class="pro-details-agent">
+                                        <h5>Contact Agent</h5>
+                                        <div class="single-agent">
+                                            <div class="agent-image">
+                                                <img src="{{ home.agent.photo.url }}" alt="">
+                                            </div>
+                                            <div class="agent-info">
+                                                <div class="agent-name">
+                                                    <h5><a href="#">{{ home.agent}}</a></h5>
+                                                    <p>Real Estate agent</p>
+                                                </div>
+                                            </div>
+                                            <div class="agent-info-hover">
+                                                <div class="agent-name">
+                                                    <h5><a href="#">{{home.agent}}</a></h5>
+                                                    <p>Real Estate agent</p>
+                                                </div>
+                                                <ul class="agent-address">
+                                                    <li><img src="{% static 'shelter/images/icons/phone-2.png' %}" alt="">{{ home.agent.phone}} </li>
+                                                    <li><img src="{% static 'shelter/images/icons/mail-close.png' %}" alt="">{{home.agent.email}} </li>
+                                                    <li><i class="fa fa-skype" aria-hidden="true"></i>    {{ home.agent.skype }}</li>
+                                                </ul>
+                                                <ul class="social-media">
+                                                    <li><a href="{{ home.agent.facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                    <li><a href="{{ home.agent.twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- leave-massage -->
+                                <div class="col-md-7  col-sm-7 col-xs-12">
+                                    <div class="leave-review">
+                                        <h5>Contact Agent</h5>
+                                        <form id="contact-form-2" action="{% url 'agentcontact' %}"  method="POST">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="agentname" value="{{home.agent }}">
+                                            <input type="text" name="name" placeholder="Your name" required>
+                                            <input type="email" name="uemail" placeholder="Email here" required>
+                                            <textarea placeholder="Your Subject" name="usub" required></textarea>
+                                            <button type="submit" class="submit-btn-1" value="send">Send</button>
+                                        </form>
+                                        <p class="form-messege"></p>
+                                        <br>
+                                        <br>
+                                    </div>
+                                    <div class="leave-review">
+                                        <h5>To send a message through whatsapp</h5>
+                                        <form action="{% url 'SendData' %}" method="POST">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <br>
+                                                <label for="Phone">phone number :</label>
+                                                <input type="text" name="Phone" id="Phone" value="{{home.agent.phone}}" readonly>
+                                                <br>
+                                                <br>
+                                                <label for="Wmessage">Enter the message :</label>
+                                                <input type="text" name="Wmessage" id="Wmessage">
+                                                <br>
+                                                <br>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Send message through whatsapp</button>
+                                        </form>
+                                        <p class="form-messege"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+        </div>
+        <!-- PROPERTIES DETAILS AREA END -->
+    </section>
+    <!-- End page content -->
+{% endblock %}
+</body>
+</html>

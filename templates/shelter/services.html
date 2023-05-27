@@ -1,0 +1,177 @@
+{% extends 'shelter/base.html' %}
+{% load static %}
+<title> {% block title %}Our Services | Shelter {% endblock %}</title>
+{% block content %}
+     <!-- BREADCRUMBS AREA START -->
+     <div class="breadcrumbs-area bread-bg-1 bg-opacity-black-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="breadcrumbs">
+                        <h2 class="breadcrumbs-title">Services</h2>
+                        <ul class="breadcrumbs-list">
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                            <li>Services</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMBS AREA END -->
+     <!-- Start page content -->
+     <section id="page-content" class="page-wrapper">
+        <!-- ABOUT real estate AREA START -->
+        <div class="about-real estate-area ptb-115">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="section-title mb-30">
+                            <h3>KNOW ABOUT </h3>
+                            <h2>OUR SERVICES</h2>
+                        </div>
+                        <div class="about-real estate-info">
+                            <p><span data-placement="top" data-toggle="tooltip" data-original-title="The name you can trust" class="tooltip-content">real estate</span> is the best theme for  </p>
+                            <div class="author-quote">
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="about-image">
+                            <img src="{% static 'shelter/images/about/4.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ABOUT real estate AREA END -->
+        <!-- SERVICES AREA START -->
+        <div class="services-area pb-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title-2 text-center">
+                            <h2>OUR SERVICES</h2>
+                            <p>real estate is the best theme for </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="service-carousel">
+                        <!-- service-item -->
+                        <div class="col-md-3">
+                            <div class="service-item">
+                                <div class="service-item-image">
+                                    <a href="#"><img src="{% static 'shelter/images/service/1.jpg' %}" alt=""></a>
+                                </div>
+                                <div class="service-item-info">
+                                    <h5><a href="#">Sale Property</a></h5>
+                                    <p>Property sale best theme for </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- service-item -->
+                        <div class="col-md-3">
+                            <div class="service-item">
+                                <div class="service-item-image">
+                                    <a href="{% url 'forsale' %}"><img src="{% static 'shelter/images/service/2.jpg' %}" alt=""></a>
+                                </div>
+                                <div class="service-item-info">
+                                    <h5><a href="{% url 'forsale' %}">Buy Property</a></h5>
+                                    <p>Property sale best theme for </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- service-item -->
+                        <div class="col-md-3">
+                            <div class="service-item">
+                                <div class="service-item-image">
+                                    <a href="{% url 'forrent' %}"><img src="{% static 'shelter/images/service/3.jpg' %}" alt=""></a>
+                                </div>
+                                <div class="service-item-info">
+                                    <h5><a href="{% url 'forrent' %}">Rent Property</a></h5>
+                                    <p>Property sale best theme for </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- service-item -->
+                        <div class="col-md-3">
+                            <div class="service-item">
+                                <div class="service-item-image">
+                                    <a href="#"><img src="{% static 'shelter/images/service/4.jpg' %}" alt=""></a>
+                                </div>
+                                <div class="service-item-info">
+                                    <h5><a href="#">Property Management</a></h5>
+                                    <p>Property sale best theme for </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- SERVICES AREA END -->
+        
+        <!-- BOOKING AREA START -->
+        <div class="booking-area bg-1 call-to-bg plr-140 pt-75">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="section-title text-white">
+                            <h3>SOME</h3>
+                            <h2 class="h1">FUN FACTOR</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-xs-12">
+                        <div class="booking-conternt  clearfix">
+                            <div class="counter-content">
+                                <!-- counter-item -->
+                                <div class="counter-item">
+                                    <h2>
+                                        <i class="fa fa-home" aria-hidden="true"></i>
+                                        <span class="counter">999</span>
+                                    </h2>
+                                    <p>Complete Project</p>
+                                </div>
+                                <!-- counter-item -->
+                                <div class="counter-item">
+                                    <h2>
+                                        <i class="fa fa-key" aria-hidden="true"></i>
+                                        <span class="counter">555</span>
+                                    </h2>
+                                    <p>Property Sold</p>
+                                </div>
+                                <!-- counter-item -->
+                                <div class="counter-item">
+                                    <h2>
+                                        <i class="fa fa-smile-o" aria-hidden="true"></i>
+                                        <span class="counter">350</span>
+                                    </h2>
+                                    <p>Happy Clients</p>
+                                </div>
+                                <!-- counter-item -->
+                                <div class="counter-item">
+                                    <h2>
+                                        <i class="fa fa-trophy" aria-hidden="true"></i>
+                                        <span class="counter">100</span>
+                                    </h2>
+                                    <p>Awards Win</p>
+                                </div>
+                            </div>
+                            <div class="booking-imgae">
+                                <img src="{% static 'shelter/images/others/booking.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BOOKING AREA END -->
+        <div style="margin-bottom:100px;">
+
+        </div>
+    </section>
+    <!-- End page content -->
+{% endblock %}

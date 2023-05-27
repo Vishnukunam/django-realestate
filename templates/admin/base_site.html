@@ -1,0 +1,11 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+{% block branding %}
+<a href="http://127.0.0.1:8000/admin/" ><img src="{% static 'shelter/images/logo/logo.jpg' %}" alt="Shelter Logo" style="height:100px;width:100px"></a>
+<h1> <b>REAL ESTATE ADMINISTRATION</b></h1>
+{% endblock %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'shelter/admin.css' %}">
+
+{% endblock %}
